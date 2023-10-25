@@ -53,13 +53,13 @@ jobs:
           with:
            ref: ${{ github.event.pull_request.head.sha }}
         - name: Install dependencies
-           run: |
+          run: |
                 Rscript -e 'install.packages("styler")'
         - name: Run styler
-           run: |
+          run: |
                 Rscript -e 'styler::style_dir(".", filetype = "R", recursive = TRUE)'
         - name: Commit changes
-           run: |
+          run: |
                 git config --global user.email "github-actions@github.com"
                 git config --global user.name "GitHub Actions"
                 git add .
