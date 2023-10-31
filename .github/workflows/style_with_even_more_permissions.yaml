@@ -4,13 +4,13 @@ on:
   push:
     paths: ["**.[rR]", "**.[qrR]md", "**.[rR]markdown", "**.[rR]nw", "**.[rR]profile"]
 
-name: Style with more permissions
+name: Style with even more permissions
 
 jobs:
-  style_with_more_permissions:
+  style_with_even_more_permissions:
     runs-on: ubuntu-latest
     permissions:
-      pull-requests: write
+      contents: write
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
