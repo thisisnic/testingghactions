@@ -4,10 +4,10 @@ on:
   push:
     paths: ["**.[rR]", "**.[qrR]md", "**.[rR]markdown", "**.[rR]nw", "**.[rR]profile"]
 
-name: Style
+name: Style with more permissions
 
 jobs:
-  style:
+  style_with_more_permissions:
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
